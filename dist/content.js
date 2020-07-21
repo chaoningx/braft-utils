@@ -286,12 +286,12 @@ var toggleSelectionEntity = exports.toggleSelectionEntity = function toggleSelec
   }
 };
 
-var toggleSelectionLink = exports.toggleSelectionLink = function toggleSelectionLink(editorState, href, target) {
+var toggleSelectionLink = exports.toggleSelectionLink = function toggleSelectionLink(editorState, href, target, name, id) {
 
   var contentState = editorState.getCurrentContent();
   var selectionState = editorState.getSelection();
 
-  var entityData = { href: href, target: target };
+  var entityData = { href: href, target: target, name: name, id: id };
 
   if (selectionState.isCollapsed() || getSelectionBlockType(editorState) === 'atomic') {
     return editorState;

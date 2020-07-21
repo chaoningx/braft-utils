@@ -1,11 +1,12 @@
 {
-  "name": "braft-utils",
+  "name": "@oceans/braft-utils",
   "version": "3.0.12",
   "description": "Utils for Braft Editor",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist/ && BABEL_ENV=production ./node_modules/.bin/babel src --copy-files --extensions .es6,.es,.js,.jsx --out-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "npm run build && npm publish --access public"
   },
   "keywords": [
     "braft",
